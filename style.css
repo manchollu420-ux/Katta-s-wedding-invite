@@ -19,7 +19,7 @@ body{
 .hero{
   min-height: 100vh;
   height: 100dvh;
-  background-image: url('https://github.com/manchollu420-ux/Katta-s-wedding-invite/blob/main/bg.png');
+  background-image: url('bg.png');
   background-repeat: no-repeat;
   background-position: center top;
   background-size: contain;
