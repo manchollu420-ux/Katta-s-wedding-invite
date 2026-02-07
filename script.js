@@ -35,13 +35,13 @@ function openModal(type) {
   const text = document.getElementById("modalText");
 
   if (type === "bride") {
-    img.src = "assets/images/bride.png";
+    img.src = "bride.png";
     name.innerText = "Divya💖";
     text.innerText = "Software Engineer at Accenture";
   }
 
   if (type === "groom") {
-    img.src = "assets/images/groom.png";
+    img.src = "groom.png";
     name.innerText = "Sravan💫";
     text.innerText = "Deputy Manager at SBI General";
   }
