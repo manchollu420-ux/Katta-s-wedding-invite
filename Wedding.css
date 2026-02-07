@@ -1,0 +1,467 @@
+/* =========================
+   GLOBAL RESET & BASE
+========================= */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+}
+
+body{
+  background:#000;
+  overflow-x:hidden;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero{
+  min-height: 100vh;
+  height: 100dvh;
+  background-image: url('../assets/images/bg.png');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain;
+  background-color: #e7b39a;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.overlay{ display:none; }
+
+.content{
+  position: relative;
+  z-index: 2;
+  margin-top: 40px;
+  padding: 30px 20px;
+  background: none;
+  transform: translateY(10px);
+}
+
+h1, h2, h3, .section-title{
+  font-family:'Playfair Display', serif;
+}
+
+.content h1{
+  font-size:48px;
+  margin:15px 0;
+}
+
+.save-date{
+  font-size:18px;
+}
+
+.wedding-date{
+  font-family:'Playfair Display', serif;
+  font-size:26px;
+  font-weight:600;
+  margin-bottom:25px;
+}
+
+/* =========================
+   COUNTDOWN
+========================= */
+.countdown{
+  display:flex;
+  gap:15px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-bottom:30px;
+}
+
+.countdown div{
+  background:rgba(255,255,255,0.15);
+  padding:15px 20px;
+  border-radius:15px;
+  min-width:90px;
+  backdrop-filter:blur(4px);
+}
+
+.countdown span{
+  font-size:28px;
+  font-weight:600;
+  display:block;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.scroll-btn{
+  padding:12px 35px;
+  border:none;
+  border-radius:30px;
+  background:#fff;
+  color:#000;
+  cursor:pointer;
+  font-weight:500;
+  transition:0.3s;
+}
+
+.scroll-btn:hover{
+  background:#f2c94c;
+  transform:scale(1.05);
+}
+
+/* =========================
+   COUPLE SECTION
+========================= */
+.couple-section{
+  padding:70px 20px;
+  min-height:100vh;
+  background: linear-gradient(to bottom,#F4C3A2,#FBEEE5);
+  text-align:center;
+}
+
+.section-title{
+  font-size:40px;
+  margin-bottom:60px;
+  color:#333;
+}
+
+.couple-container{
+  display:flex;
+  justify-content:center;
+  gap:60px;
+  flex-wrap:wrap;
+}
+
+.couple-card{
+  width:260px;
+  background:#fff;
+  border-radius:25px;
+  padding:15px;
+  cursor:pointer;
+  transition:0.4s;
+  box-shadow:0 12px 30px rgba(0,0,0,0.12);
+}
+
+.couple-card img{
+  width:100%;
+  height:330px;
+  object-fit:cover;
+  object-position:center top;
+  border-radius:18px;
+}
+
+.couple-card:hover{
+  transform:translateY(-10px);
+}
+
+.events-btn-wrap{
+  margin-top:60px;
+  display:flex;
+  justify-content:center;
+}
+
+/* =========================
+   EVENTS
+========================= */
+.events-section{
+  padding-top:70px;
+  min-height:100vh;
+  background: linear-gradient(to bottom,#F4C3A2,#FBEEE5);
+  text-align:center;
+}
+
+.events-container{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  flex-wrap:wrap;
+  margin-top:60px;
+}
+
+.event-card{
+  width:300px;
+  padding:35px 25px;
+  border-radius:25px;
+  transition:0.4s;
+}
+
+.glass{
+  background:rgba(255,255,255,0.6);
+  backdrop-filter:blur(10px);
+  box-shadow:0 15px 40px rgba(0,0,0,0.15);
+}
+
+/* =========================
+   MODAL
+========================= */
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.7);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+}
+
+.modal-content{
+  background:#fff;
+  padding:30px;
+  border-radius:20px;
+  width:90%;
+  max-width:400px;
+  text-align:center;
+}
+
+.modal-content img{
+  width:100%;
+  height:300px;
+  object-fit:contain;
+  object-position:center top;
+  border-radius:15px;
+}
+
+/* =========================
+   🔥 MOBILE IMAGE FIX (ONLY CHANGE)
+========================= */
+@media (max-width:600px){
+
+  .content h1{ font-size:32px; }
+  .save-date{ font-size:16px; }
+  .wedding-date{ font-size:20px; }
+
+  .couple-card img{
+    height:260px;
+    object-fit:contain;          /* ✅ NO CROPPING */
+    object-position:center top;  /* ✅ HAIR SAFE */
+    background:#f7e4d7;          /* soft fill */
+  }
+
+  .scroll-btn{
+    width:100%;
+    max-width:280px;
+  }
+}
+
+/* =========================
+   HERO BACKGROUND MOBILE
+========================= */
+@media (max-width:768px){
+  .hero{
+    background-size:cover;
+  }
+}
+
+/* =========================
+   FOOTER (PREMIUM)
+========================= */
+
+.site-footer{
+  position: relative;
+  background: linear-gradient(to top, #e7b39a, #fbeeee);
+  padding: 80px 20px 50px;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Floating hearts background */
+
+.hearts-bg::after{
+  animation-delay: 9s;
+}
+
+@keyframes floatHearts{
+  0%{ transform: translateY(100px); opacity:0; }
+  50%{ opacity:0.15; }
+  100%{ transform: translateY(-400px); opacity:0; }
+}
+
+/* Content */
+.footer-content{
+  position: relative;
+  z-index: 2;
+}
+
+.footer-title{
+  font-family:'Playfair Display', serif;
+  font-size: 28px;
+  color:#5c3b2e;
+}
+
+.footer-names{
+  font-family:'Playfair Display', serif;
+  font-size: 40px;
+  font-weight: 600;
+  margin: 10px 0;
+  color:#3a1f14;
+}
+
+.footer-text{
+  font-size: 16px;
+  color:#5a3a2e;
+  margin-bottom: 10px;
+}
+
+.footer-date{
+  font-size: 14px;
+  letter-spacing: 3px;
+  color:#7a4a3a;
+}
+
+.footer-divider{
+  width: 120px;
+  height: 2px;
+  background: #c9a27c;
+  margin: 18px auto;
+  border-radius: 2px;
+}
+
+.footer-blessing{
+  font-size: 15px;
+  font-style: italic;
+  color:#6a3f2c;
+}
+
+.footer-copy{
+  margin-top: 18px;
+  font-size: 12px;
+  color:#7a5a4a;
+}
+
+/* Fade animation */
+.fade-in{
+  animation: fadeInUp 1.5s ease;
+}
+
+@keyframes fadeInUp{
+  from{ opacity:0; transform: translateY(30px); }
+  to{ opacity:1; transform: translateY(0); }
+}
+
+/* Scroll to top */
+.scroll-top{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border: none;
+  background: #f2c94c;
+  color: #000;
+  font-size: 18px;
+  padding: 10px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition: 0.3s;
+  z-index: 9999;
+}
+
+.scroll-top:hover{
+  transform: scale(1.1);
+}
+
+/* Music button */
+.music-btn{
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  border: none;
+  background: rgba(255,255,255,0.8);
+  font-size: 18px;
+  padding: 10px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition: 0.3s;
+  z-index: 9999;
+}
+.soft-footer-divider{
+  width: 100%;
+  height: 90px;
+  background: linear-gradient(
+    to bottom,
+    #fbeeee,
+    #f3d1bf,
+    #e7b39a
+  );
+}
+.footer-separator{
+  width: 160px;
+  height: 2px;
+  margin: 0 auto 35px;
+  background: linear-gradient(to right, transparent, #e6c28b, transparent);
+  border-radius: 5px;
+}
+/* Pounding hearts */
+.footer-blessing{
+  font-size: 15px;
+  font-style: italic;
+  color:#6a3f2c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Heart animation */
+.heart{
+  display: inline-block;
+  font-size: 18px;
+  filter: drop-shadow(0 0 6px rgba(255, 105, 180, 0.6));
+}
+
+.beat{
+  animation: heartbeat 1.4s infinite ease-in-out;
+}
+
+/* Heartbeat animation */
+@keyframes heartbeat{
+  0%{ transform: scale(1); }
+  20%{ transform: scale(1.3); }
+  40%{ transform: scale(1); }
+  60%{ transform: scale(1.3); }
+  80%{ transform: scale(1); }
+  100%{ transform: scale(1); }
+}
+/* Pounding heart for section title */
+.title-heart{
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 32px;
+  filter: drop-shadow(0 0 6px rgba(255, 105, 180, 0.6));
+}
+
+.beat{
+  animation: heartbeat 1.4s infinite ease-in-out;
+}
+
+/* Heartbeat animation */
+@keyframes heartbeat{
+  0%{ transform: scale(1); }
+  20%{ transform: scale(1.3); }
+  40%{ transform: scale(1); }
+  60%{ transform: scale(1.3); }
+  80%{ transform: scale(1); }
+  100%{ transform: scale(1); }
+}
+
+
+.music-btn:hover{
+  transform: scale(1.1);
+}
+
+/* Mobile */
+@media (max-width:600px){
+  .footer-names{ font-size: 28px; }
+  .footer-title{ font-size: 22px; }
+}
+.logo{
+  font-size: 80px;
+  font-family: 'Playfair Display', serif;
+  color: #64032e;
+  letter-spacing: -10px;
+}
+
+@media (max-width:600px){
+  .logo{
+    font-size: 64px;
+    letter-spacing: -8px;
+  }
+}
